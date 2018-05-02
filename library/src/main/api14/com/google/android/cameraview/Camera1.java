@@ -531,7 +531,7 @@ class Camera1 extends CameraViewImpl implements MediaRecorder.OnInfoListener,
         }
         int desiredWidth;
         int desiredHeight;
-        final int surfaceWidth = 1280; //mPreview.getWidth();
+        final int surfaceWidth = (int)(720 * getAspectRatio().toFloat()); //mPreview.getWidth();
         final int surfaceHeight = 720; //mPreview.getHeight();
         if (isLandscape(mDisplayOrientation)) {
             desiredWidth = surfaceHeight;
